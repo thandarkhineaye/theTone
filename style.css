@@ -1,0 +1,31 @@
+.controlDiv {
+ position: absolute;
+ top: 50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width: 90%;
+   max-width: 450px;
+}
+.mtypLabel{
+ width:100px;
+ text-align:left;
+}
+form,h4{
+ font-family: 'Georgia', Times, serif;
+}
+h4,*.memberTypeForm{
+ text-align:center;
+}
+.businessName{
+ font-family: 'Helvetica', 'Arial', sans-serif;
+ font-weight: bold;
+ text-align:center;
+}
+legend{
+ font-size:8px;
+}
+.quote{
+ color:#679327;
+ font-family: 'Helvetica', 'Arial', sans-serif;
+ font-weight: bold;
+}
