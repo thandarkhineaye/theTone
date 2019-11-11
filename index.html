@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="
+https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD
++dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="
+https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH
++8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="
+https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+ crossorigin="anonymous"></script>
+  <script src="
+https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM
++B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="
+https://unpkg.com/react@16/umd/react.development.js"></script> -->
+  <!-- <script src="
+https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
+  <title>TONE</title>
+ </head>
+ <body>
+  <div class="container">
+   <div class="justify-content-center controlDiv">
+    <article class="row align-self-center businessName">
+     <div class="col py-4">
+      <h1>T O N E</h1>
+      <h6 class=" blockquote-footer Source Title"> Start Creation & Walk To
+Dreams <h6>
+     </div>
+    </article>
+    <br>
+    <article class="row align-self-center">
+     <div class="col">
+      <h4>MEMBER LOGIN</h4>
+     </div>
+    </article>
+
+    <article class="row align-self-center">
+     <div class="col">
+      <form class="memberTypeForm">
+       <fieldset class="border p-2">
+        <legend  class="w-auto">
+         <font size="4">&nbsp;&nbsp;Choose Member Type&nbsp;&nbsp;</font>
+        </legend>
+        <div class="form-check">
+         <input class="form-check-input" type="radio" name="userTyp"
+value="s" checked>
+          <label class="form-check-label mtypLabel" for="seller">
+           SELLER
+          </label>
+         <input class="form-check-input" type="radio" name="userTyp"
+value="b">
+          <label class="form-check-label mtypLabel" for="buyer">
+           BUYER
+          </label>
+        </div>
+       </fieldset>
+      </form>
+     </div>
+    </article>
+    <br>
+    <article class="row align-self-center">
+     <div class="col">
+      <form>
+       <div class="form-group">
+           USER NAME:<br>
+           <input class="form-control" type="text" name="username"
+id="uname">
+           <div class="invalid-feedback" id="usernameFB">
+
+         </div>
+           <br>
+           PASSWORD:<br>
+           <input class="form-control"  type="password" name="password"
+id="pword">
+           <div class="invalid-feedback" id="passwordFB">
+
+         </div>
+           <small id="passwordHelpInline" class="text-muted">
+          Must be 8-20 characters long.
+            </small>
+       </div>
+      </form>
+     </div>
+    </article>
+    <article class="row align-self-center">
+     <div class="col">
+      <form action="/new_url" method="POST">
+       <div class="form-group">
+          <button type="submit" class="btn btn-dark" data-toggle="button"
+aria-pressed="false" autocomplete="off" onclick = "validate()">
+           Sign in
+          </button>
+       </div>
+      </form>
+     </div>
+    </article>
+   </div>
+  </div>
+
+  <script>
+  function validate() {
+   var un = document.getElementById("uname");
+   var username = document.getElementById("uname").value;
+   var pw = document.getElementById("pword");
+   var pword = document.getElementById("pword").value;
+   if (username == "" || username.length == 0 || username == null)
+   {
+    un.classList.add("is-invalid");
+       document.getElementById("usernameFB").innerHTML= "Please insert a
+username.";
+   } else {
+    un.classList.remove("is-invalid");
+    document.getElementById("usernameFB").innerHTML= "";
+   }
+   if (pword == "" || pword.length == 0 || pword == null) {
+    pw.classList.add("is-invalid");
+       document.getElementById("passwordFB").innerHTML= "Please insert a
+password.";
+   } else {
+    pw.classList.remove("is-invalid");
+    document.getElementById("passwordFB").innerHTML= "";
+   }
+   if ((username != "" || username.length != 0 || username != null) &&
+(pword != "" || pword.length != 0 || pword != null)) {
+    window.location.href="home.html";
+   }
+  }
+
+     </script>
+ </body>
+</html>
